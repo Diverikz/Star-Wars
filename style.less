@@ -1,0 +1,56 @@
+//compress : false
+
+@import "_vars";
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: @white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0, 0, 1rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Container
+===================*/
+@import "blocks/_containers";
+
+#header {
+  height: 480px;
+  background: url("img/background.png");
+  position: relative;
+}
+
+@import "blocks/_cards";
+
+.footer {
+  background-color: @cards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+.footer__title {
+  margin: 0 auto;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+}

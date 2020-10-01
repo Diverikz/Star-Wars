@@ -1,0 +1,47 @@
+// main: ../style.less
+
+.cards {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  padding-bottom: 10rem;
+}
+
+.card {
+  background: @cards;
+  border-radius: 8px;
+  cursor: pointer;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));
+
+  &:hover {
+    filter: drop-shadow(0 10px 40px rgba(37, 136, 167, 0.38));
+  }
+}
+.icon {
+  margin-top: 93px;
+  width: 80px;
+  height: 80px;
+}
+
+.card__info {
+  text-align: center;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 10px;
+  margin-bottom: 9px;
+  font-feature-settings: "liga" off;
+}
+
+.spicies {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  color: @grey;
+  margin-bottom: 92px;
+}
