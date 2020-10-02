@@ -32,7 +32,31 @@ p {
   max-width: 1216px;
   margin: 0 auto;
 }
+#header {
+  height: 480px;
+  background: url("img/background.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.logo__content {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
 .wrapper {
+  position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
   display: flex;
@@ -40,27 +64,34 @@ p {
   align-items: center;
   width: 100%;
 }
-input {
-  width: 98%;
-  border: 0px;
-  background: transparent;
-  border-bottom: 2px solid green;
-  outline: none;
-  color: #fff;
-  font-weight: normal;
-  font-size: 18px;
-}
 .search__cont {
   width: 800px;
-  height: 50px;
-  background-color: red;
+  height: 80px;
+  background-color: transparent;
   text-align: center;
   line-height: 48px;
 }
-#header {
-  height: 480px;
-  background: url("img/background.png");
-  position: relative;
+label {
+  padding-top: 20px;
+}
+.label-text {
+  color: #808080;
+  transform: translateY(-27.5px);
+  cursor: text;
+  font-size: 18px;
+}
+input:focus + .label-text {
+  transform: translateY(-45px);
+}
+input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #808080;
+  outline: 0;
+  width: 800px;
+  color: #808080;
+  font-size: 18px;
+  transition: all 0.2s;
 }
 .cards {
   display: grid;

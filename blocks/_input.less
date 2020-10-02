@@ -1,0 +1,44 @@
+// main: ../style.less
+
+.wrapper {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.search__cont {
+  width: 800px;
+  height: 80px;
+  background-color: transparent;
+  text-align: center;
+  line-height: 48px;
+}
+
+label {
+  padding-top: 20px;
+}
+.label-text {
+  color: @grey;
+  transform: translateY(-27.5px);
+  cursor: text;
+  font-size: 18px;
+}
+
+input:focus + .label-text {
+  transform: translateY(-45px);
+}
+
+input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid @grey;
+  outline: 0;
+  width: 800px;
+  color: @grey;
+  font-size: 18px;
+  transition: all 0.2s;
+}
