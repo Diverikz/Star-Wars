@@ -19,8 +19,6 @@ p {
 *:after {
   box-sizing: border-box;
 }
-/* Container
-===================*/
 .bg__container {
   width: 100%;
   max-width: 1440px;
