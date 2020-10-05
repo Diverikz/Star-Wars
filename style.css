@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   color: #ffffff;
+  background-color: #e5e5e5;
 }
 h1,
 h2,
@@ -74,9 +75,7 @@ label {
   transform: translateY(-28px);
   cursor: text;
   font-size: 18px;
-}
-input:focus + .label__text {
-  transform: translateY(-44px);
+  transition: all 0.2s;
 }
 input {
   background-color: transparent;
@@ -86,7 +85,14 @@ input {
   width: 800px;
   color: #808080;
   font-size: 18px;
-  transition: all 0.2s;
+}
+input:focus + .label__text {
+  font-size: 13px;
+  transform: translateY(-39px);
+}
+input:valid + .label__text {
+  font-size: 13px;
+  transform: translateY(-39px);
 }
 .fa-search {
   width: 24px;
