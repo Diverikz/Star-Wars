@@ -9,9 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
 
   <svg style="display: none">
@@ -146,9 +144,17 @@
         fill="gray"
       />
     </symbol>
+    <symbol id="ic-close" viewBox="0 0 14 14">
+      <path
+        d="M1 13L13 1M13 13L1 1"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </symbol>
   </svg>
 
-  <body id="main-body" style="overflow: visible">
+  <body id="main-body">
     <div class="bg__container">
       <header id="header">
         <div class="logo">
@@ -176,7 +182,7 @@
         </div>
         <!--wrapper -->
 
-        <section class="cards">
+        <section class="cards" data-modal="#modal__project">
           <div class="card" id="card">
             <div class="card__info">
               <svg class="icon">
@@ -187,7 +193,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" data-modal="#modal__project">
             <div class="card__info">
               <svg class="icon">
                 <use xlink:href="#second" />
@@ -197,7 +203,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" data-modal="#modal__project">
             <div class="card__info">
               <svg class="icon">
                 <use xlink:href="#third" />
@@ -207,7 +213,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" data-modal="#modal__project">
             <div class="card__info">
               <svg class="icon">
                 <use xlink:href="#fourth" />
@@ -217,7 +223,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" data-modal="#modal__project">
             <div class="card__info">
               <svg class="icon">
                 <use xlink:href="#fifth" />
@@ -227,7 +233,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" data-modal="#modal__project">
             <div class="card__info">
               <svg class="icon">
                 <use xlink:href="#sixth" />
@@ -237,7 +243,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" data-modal="#modal__project">
             <div class="card__info">
               <svg class="icon">
                 <use xlink:href="#seventh" />
@@ -247,7 +253,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" data-modal="#modal__project">
             <div class="card__info">
               <svg class="icon">
                 <use xlink:href="#eighth" />
@@ -257,7 +263,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" data-modal="#modal__project">
             <div class="card__info">
               <svg class="icon">
                 <use xlink:href="#ninth" />
@@ -267,7 +273,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" data-modal="#modal_project">
             <div class="card__info">
               <svg class="icon">
                 <use xlink:href="#tenth" />
@@ -286,65 +292,70 @@
         </div>
       </footer>
 
-      <div class="bg__popup" style="display: none">
-        <div class="popup">
-          <span class="close">&times;</span>
+      <div class="modal" id="modal__project">
+        <div class="modal__dialog">
+          <button class="modal__close" type="button" data-close>
+            <img src="img/close.svg" alt="Close" />
+          </button>
 
-          <div class="popup__content">
-            <svg class="icon">
-              <use xlink:href="#first" />
-            </svg>
+          <div class="modal-work__content">
+            <div class="inform__block">
+              <svg class="icon icon--inform">
+                <use xlink:href="#first" />
+              </svg>
+              <span class="user__name">Name</span>
+            </div>
 
             <div class="elements">
               <div class="el__block">
-                <svg class="icon__popup">
+                <svg class="icon__modal">
                   <use xlink:href="#Birth" />
                 </svg>
-                <span class="grey">Birth day</span>
-                <span class="white">Birth day</span>
+                <span class="user__inform">Birth day</span>
               </div>
+              <span class="inform__text">Birth day</span>
 
               <div class="el__block">
-                <svg class="icon__popup">
+                <svg class="icon__modal">
                   <use xlink:href="#Species" />
                 </svg>
-                <span class="grey">Species</span>
-                <span class="white">Species</span>
+                <span class="user__inform">Species</span>
               </div>
+              <span class="inform__text">Species</span>
 
               <div class="el__block">
-                <svg class="icon__popup">
+                <svg class="icon__modal">
                   <use xlink:href="#Gender" />
                 </svg>
-                <span class="grey">Gender</span>
-                <span class="white">Gender</span>
+                <span class="user__inform">Gender</span>
               </div>
+              <span class="inform__text">Gender</span>
 
               <div class="el__block">
-                <svg class="icon__popup">
+                <svg class="icon__modal">
                   <use xlink:href="#Homeworld" />
                 </svg>
-                <span class="grey">Homeworld</span>
-                <span class="white">Homeworld</span>
+                <span class="user__inform">Homeworld</span>
               </div>
+              <span class="inform__text">Homeworld</span>
 
               <div class="el__block">
-                <svg class="icon__popup">
+                <svg class="icon__modal">
                   <use xlink:href="#Films" />
                 </svg>
-                <span class="grey">Films</span>
-                <span class="white">Films</span>
+                <span class="user__inform">Films</span>
               </div>
+              <span class="inform__text">Films</span>
             </div>
             <!-- elements -->
           </div>
-          <!--popup__content -->
+          <!-- /.modal-work__content -->
         </div>
-        <!-- popup -->
+        <!-- /.modal__dialog -->
       </div>
-      <!-- bg__popup-->
+      <!-- /.modal -->
     </div>
-    <!-- bgcont</div> -->
+    <!-- bg__cont -->
 
     <!-- Javasript -->
     <script src="app.js"></script>

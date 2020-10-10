@@ -7,6 +7,9 @@ body {
   font-family: "Roboto", sans-serif;
   color: @white;
   background-color: #e5e5e5;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 h1,
@@ -34,4 +37,4 @@ p {
 @import "blocks/_input";
 @import "blocks/_cards";
 @import "blocks/_footer";
-@import "blocks/_popup.less";
+@import "blocks/_modal.less";

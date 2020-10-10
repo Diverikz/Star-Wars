@@ -4,6 +4,9 @@ body {
   color: #ffffff;
   background-color: #e5e5e5;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 h1,
 h2,
 h3,
@@ -161,52 +164,90 @@ input:valid + .label__text {
   font-weight: bold;
   font-size: 18px;
 }
-.bg__popup {
+.modal {
   display: none;
   width: 100%;
   height: 100%;
-  background: rgba(128, 128, 128, 0.01);
-  position: absolute;
+  padding: 1rem;
+  overflow: auto;
+  background-color: rgba(128, 128, 128, 0.01);
+  backdrop-filter: blur(15px);
+  position: fixed;
   top: 0;
   left: 0;
-  justify-content: center;
-  align-items: center;
+  z-index: 1000;
 }
-.popup {
-  width: 800px;
-  background: #1a1a1a;
-  border-radius: 0.5rem;
+.modal.show {
+  display: flex;
 }
-.close {
-  cursor: pointer;
-  font-size: 30px;
-  color: #ffffff;
-  margin-left: 98%;
-}
-.popup__content {
+.modal__dialog {
   width: 100%;
-  max-width: 620px;
-  margin: 0 auto;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  transform: scale(0);
+  transition: transform 0.2s linear;
+}
+.modal__close {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0.9rem;
+  right: 1rem;
+  z-index: 1;
+}
+.modal__close:focus {
+  outline: none;
+}
+.modal-work__content {
+  width: 100%;
+  padding: 80px 80px 76px 80px;
+  position: relative;
+}
+.inform__block {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #808080;
+}
+.icon__modal {
+  width: 20px;
+  height: 20px;
+  margin-right: 11px;
+}
+.icon--inform {
+  margin-right: 1rem;
+  margin-bottom: 80px;
+}
+.user__name {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 84px;
 }
 .elements {
-  max-width: 520px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  max-width: 520px;
+  margin-top: 71px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1.25rem;
 }
 .el__block {
   display: flex;
   align-items: center;
 }
-.icon__popup {
-  width: 20px;
-  height: 20px;
-}
-.grey {
+.user__inform {
   font-size: 18px;
   line-height: 21px;
   color: #808080;
 }
-.white {
+.inform__text {
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
