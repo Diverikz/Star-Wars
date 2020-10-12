@@ -5,12 +5,13 @@
   grid-gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  padding-bottom: 10rem;
+  margin: 0 1.5rem 10rem;
 
   @media @mobile-breakpoint {
     grid-template-columns: none;
     grid-template-rows: repeat(auto, 1fr);
     grid-gap: 24px;
+    margin-bottom: 7.5rem;
   }
 }
 
@@ -24,23 +25,24 @@
     filter: drop-shadow(0 10px 40px rgba(37, 136, 167, 0.38));
   }
 }
-.icon {
-  width: 80px;
-  height: 80px;
-}
 
 .card__info {
-  margin-top: 93px;
+  padding-top: 93px;
   text-align: center;
-  margin-bottom: 92px;
+  padding-bottom: 92px;
+
+  @media @mobile-breakpoint {
+    padding-top: 33px;
+    padding-bottom: 32px;
+  }
 }
 
 .name {
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
-  margin-top: 10px;
-  margin-bottom: 9px;
+  padding-top: 10px;
+  padding-bottom: 9px;
 }
 
 .spicies {

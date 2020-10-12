@@ -1,12 +1,17 @@
 // main: ../style.less
 
-.wrapper {
-  padding-top: 80px;
-  padding-bottom: 80px;
+.form__group {
+  margin-top: 80px;
+  margin-bottom: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  @media @mobile-breakpoint {
+    margin-top: 45px;
+    margin-bottom: 15px;
+  }
 }
 
 .input__form {
@@ -42,6 +47,14 @@ input {
   &:valid + .label__text {
     font-size: 13px;
     transform: translateY(-39px);
+  }
+
+  @media @tablet-breakpoint {
+    width: 560px;
+  }
+
+  @media @mobile-breakpoint {
+    width: 275px;
   }
 }
 

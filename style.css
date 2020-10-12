@@ -33,7 +33,19 @@ p {
   width: 100%;
   max-width: 1216px;
   margin: 0 auto;
-  padding: 1.5rem;
+}
+.icon {
+  width: 80px;
+  height: 80px;
+}
+.icon__modal {
+  width: 20px;
+  height: 20px;
+  margin-right: 11px;
+}
+.icon--inform {
+  margin-right: 1rem;
+  margin-bottom: 80px;
 }
 #header {
   height: 480px;
@@ -42,11 +54,25 @@ p {
   background-size: cover;
   position: relative;
 }
+@media (max-width: 561px) {
+  #header {
+    background: url("img/bg-mobile.png");
+    background-position: center;
+    background-size: cover;
+    height: 240px;
+  }
+}
 .logo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 561px) {
+  .img__avatar {
+    width: 212px;
+    height: 50px;
+  }
 }
 .logo__content {
   padding-top: 9px;
@@ -58,13 +84,26 @@ p {
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
-.wrapper {
-  padding-top: 80px;
-  padding-bottom: 80px;
+@media (max-width: 561px) {
+  .logo__content {
+    font-size: 13px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.form__group {
+  margin-top: 80px;
+  margin-bottom: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+@media (max-width: 561px) {
+  .form__group {
+    margin-top: 45px;
+    margin-bottom: 15px;
+  }
 }
 .input__form {
   position: relative;
@@ -97,6 +136,16 @@ input:valid + .label__text {
   font-size: 13px;
   transform: translateY(-39px);
 }
+@media (max-width: 801px) {
+  input {
+    width: 560px;
+  }
+}
+@media (max-width: 561px) {
+  input {
+    width: 275px;
+  }
+}
 .fa-search {
   width: 24px;
   height: 24px;
@@ -109,13 +158,14 @@ input:valid + .label__text {
   grid-gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  padding-bottom: 10rem;
+  margin: 0 1.5rem 10rem;
 }
-@media (max-width: 760px) {
+@media (max-width: 561px) {
   .cards {
     grid-template-columns: none;
     grid-template-rows: repeat(auto, 1fr);
     grid-gap: 24px;
+    margin-bottom: 7.5rem;
   }
 }
 .card {
@@ -127,21 +177,23 @@ input:valid + .label__text {
 .card:hover {
   filter: drop-shadow(0 10px 40px rgba(37, 136, 167, 0.38));
 }
-.icon {
-  width: 80px;
-  height: 80px;
-}
 .card__info {
-  margin-top: 93px;
+  padding-top: 93px;
   text-align: center;
-  margin-bottom: 92px;
+  padding-bottom: 92px;
+}
+@media (max-width: 561px) {
+  .card__info {
+    padding-top: 33px;
+    padding-bottom: 32px;
+  }
 }
 .name {
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
-  margin-top: 10px;
-  margin-bottom: 9px;
+  padding-top: 10px;
+  padding-bottom: 9px;
 }
 .spicies {
   font-style: normal;
@@ -153,6 +205,7 @@ input:valid + .label__text {
 .footer {
   background-color: #1a1a1a;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 120px;
@@ -163,6 +216,13 @@ input:valid + .label__text {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 18px;
+}
+@media (max-width: 561px) {
+  .footer__title {
+    font-size: 14px;
+    padding-left: 60px;
+    padding-right: 30px;
+  }
 }
 .modal {
   display: none;
@@ -191,15 +251,13 @@ input:valid + .label__text {
   transition: transform 0.2s linear;
 }
 .modal__close {
-  width: 22px;
-  height: 22px;
   padding: 0;
   background: none;
   border: 0;
   cursor: pointer;
   position: absolute;
-  top: 0.9rem;
-  right: 1rem;
+  top: 1.375rem;
+  right: 1.375rem;
   z-index: 1;
 }
 .modal__close:focus {
@@ -210,19 +268,15 @@ input:valid + .label__text {
   padding: 80px 80px 76px 80px;
   position: relative;
 }
+@media (max-width: 561px) {
+  .modal-work__content {
+    padding: 48px 24px 156px 24px;
+  }
+}
 .inform__block {
   display: flex;
   align-items: center;
   border-bottom: 2px solid #808080;
-}
-.icon__modal {
-  width: 20px;
-  height: 20px;
-  margin-right: 11px;
-}
-.icon--inform {
-  margin-right: 1rem;
-  margin-bottom: 80px;
 }
 .user__name {
   font-weight: bold;
@@ -235,8 +289,12 @@ input:valid + .label__text {
   max-width: 520px;
   margin-top: 71px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   grid-gap: 1.25rem;
+}
+@media (max-width: 561px) {
+  .elements {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .el__block {
   display: flex;

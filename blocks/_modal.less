@@ -33,8 +33,6 @@
 }
 
 .modal__close {
-  width: 22px;
-  height: 22px;
   padding: 0;
 
   background: none;
@@ -42,8 +40,8 @@
   cursor: pointer;
 
   position: absolute;
-  top: 0.9rem;
-  right: 1rem;
+  top: 1.375rem;
+  right: 1.375rem;
   z-index: 1;
 
   &:focus {
@@ -55,21 +53,15 @@
   width: 100%;
   padding: 80px 80px 76px 80px;
   position: relative;
+
+  @media @mobile-breakpoint {
+    padding: 48px 24px 156px 24px;
+  }
 }
 .inform__block {
   display: flex;
   align-items: center;
   border-bottom: 2px solid @gray;
-}
-.icon__modal {
-  width: 20px;
-  height: 20px;
-  margin-right: 11px;
-}
-
-.icon--inform {
-  margin-right: 1rem;
-  margin-bottom: 80px;
 }
 
 .user__name {
@@ -83,8 +75,11 @@
   max-width: 520px;
   margin-top: 71px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   grid-gap: 1.25rem;
+
+  @media @mobile-breakpoint {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .el__block {
