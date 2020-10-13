@@ -49,14 +49,14 @@ p {
 }
 #header {
   height: 480px;
-  background: url("img/background.png");
+  background: url("../img/background.png");
   background-position: center;
   background-size: cover;
   position: relative;
 }
 @media (max-width: 561px) {
   #header {
-    background: url("img/bg-mobile.png");
+    background: url("../img/bg-mobile.png");
     background-position: center;
     background-size: cover;
     height: 240px;
@@ -263,13 +263,13 @@ input:valid + .label__text {
 .modal__close:focus {
   outline: none;
 }
-.modal-work__content {
+.modal__content {
   width: 100%;
   padding: 80px 80px 76px 80px;
   position: relative;
 }
 @media (max-width: 561px) {
-  .modal-work__content {
+  .modal__content {
     padding: 48px 24px 156px 24px;
   }
 }
